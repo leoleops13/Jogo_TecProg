@@ -1,8 +1,8 @@
 #pragma once
-#include "Entidade.h"
+#include "Personagem.h"
 #include<SFML/Graphics.hpp>
 
-class Jogador :public Entidade
+class Jogador :public Personagem
 {
 private:
 	sf::Vector2f posicaoAnterior;
@@ -13,8 +13,5 @@ public:
     void Executar();
 
     void colidir(Entidade* e);
-
-
-
 };
 

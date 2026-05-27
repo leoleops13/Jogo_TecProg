@@ -1,9 +1,10 @@
 #pragma once
-#include "Entidade.h"
-class Inimigo :
-    public Entidade
+#include "Personagem.h"
+
+class Inimigo :public Personagem
 {
-private:
+protected:
+	int nivel_maldade;
 public:
 	Inimigo();
 	~Inimigo();

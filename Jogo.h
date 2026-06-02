@@ -6,20 +6,21 @@
 #include"Inimigo.h"
 #include"ListaEntidades.h"
 #include"Fase.h"
+#include"Personagem.h"
 #include"GerenciadorColisao.h"
 
 class Jogo
 {
 private:
-    sf::RenderWindow window;
+    sf::RenderWindow window;//se não me engano window é declarada dentro de gerenciador gráfico, discutir
     Jogador* player1;
-    ListaEntidades* LEs;
-    Fase* fase1;
-    GerenciadorColisao* pGC;
+    ListaEntidades* LEs;//classe Lista e ListaEntidades é declarada dentro da classe Fase não em Jogo
+    Fase* fase1;//a classe jogo chama Fase_prim ou Fase_seg direto não a classe base Fase
+    GerenciadorColisao* pGC;//na classe jogo não se declara como ponteiro , ajustar
 	
 public:
     Jogo();
-
+	~Jogo();
     void Executar();
 };
 

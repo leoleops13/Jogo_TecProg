@@ -11,7 +11,6 @@ Jogo::Jogo():window(sf::VideoMode({ 400, 400 }), "Joguinho de cria")
     Executar();
 }
 Jogo::~Jogo(){
-	std::cout << "JOGO ACABOU :(";
 }	
 void Jogo::Executar()
 {
@@ -20,7 +19,7 @@ void Jogo::Executar()
         while (const std::optional event = window.pollEvent())
         {
             if (event->is<sf::Event::Closed>())
-                delete this;//DESTRUTORA DA CLASSE JOGO CHAMADA DENTRO DE EXECUTAR 
+                window.close(); 
         }
         //incluir menu antes para a seleção de fases
         player1->Executar();//alterar para pPlayer ou pJogador

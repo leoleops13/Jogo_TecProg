@@ -14,6 +14,6 @@ public:
   virtual ~Ente();
   virtual void executar()=0;
   void desenhar();//analisar a possibilidade de tornar o método em virtual
-  static void setGG(GGrafico* pGG);
+  static void setGG(GGrafico* pG);
 };
 //vincular nas outras classes derivadas

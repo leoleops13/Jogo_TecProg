@@ -1,19 +1,27 @@
 #pragma once
 #include<SFML/Graphics.hpp>
 #include<optional>  
+#include"GerenciadorGrafico.h"
+
+class GerenciadorGrafico;
 
 class Entidade
 {
 protected:
+
 	sf::RectangleShape body;
-	sf::RenderWindow* window;
+	GerenciadorGrafico* pGG;
+
 public:
+
 	Entidade();
-	~Entidade();
+	virtual ~Entidade();
 
 	sf::FloatRect getBounds();
+	
 	virtual void colidir(Entidade* e);
-	void SetWindow(sf::RenderWindow * window) {this->window = window;}
-	void Draw() { window->draw(body); }
-};
+	void setGerenciadorGrafico(GerenciadorGrafico* gg);
+	void Draw();
+	void setPosition(sf::Vector2f pos);	
+	sf::Vector2f getPosition();
 

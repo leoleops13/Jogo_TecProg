@@ -1,25 +1,45 @@
 #include "GerenciadorColisao.h"
-#include<SFML/Graphics.hpp>
+#include "Jogador.h"
+#include "Inimigo.h"
+#include "Entidade.h"
 
-GerenciadorColisao::GerenciadorColisao(ListaEntidades* lista)
+
+GerenciadorColisao::GerenciadorColisao()
 {
-	plistaEntidades = lista;
+	pJogador = nullptr;
 }
 
-void GerenciadorColisao::executar()
+GerenciadorColisao::~GerenciadorColisao()
 {
-	for (int i = 0;i < plistaEntidades->getTam();i++)
-	{
-		Entidade* e1 = plistaEntidades->getElementos(i);
+}
 
-		for (int j = i + 1;j < plistaEntidades->getTam();j++)
+void GerenciadorColisao::incluirJogador(Jogador* player)
+{
+	pJogador = player;
+}
+
+void GerenciadorColisao::incluirInimigo(Inimigo* inimigo)
+{
+	listaInimigos.push_back(inimigo);
+}
+
+bool GerenciadorColisao::verificarColisao(Entidade* e1, Entidade* e2)
+{
+	return e1->getBounds().findIntersection(e2->getBounds()).has_value();
+}
+
+void GerenciadorColisao::colisaoInimigo()
+{
+	for (Inimigo* inimigo : listaInimigos)
+	{
+		if (verificarColisao(pJogador, inimigo))
 		{
-			Entidade* e2 = plistaEntidades->getElementos(j);
-			if (e1->getBounds().findIntersection(e2->getBounds()).has_value())
-			{
-				e1->colidir(e2);
-				e2->colidir(e1);
-			}
+			pJogador->colidir(inimigo);
+			inimigo->colidir(pJogador);
 		}
 	}
+}
+void GerenciadorColisao::executar()
+{
+	colisaoInimigo();
 }

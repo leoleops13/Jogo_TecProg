@@ -7,11 +7,12 @@
 #include"ListaEntidades.h"
 #include"Fase.h"
 #include"GerenciadorColisao.h"
+#include"GerenciadorGrafico.h"
 
 class Jogo
 {
 private:
-    sf::RenderWindow window;
+	GerenciadorGrafico* pGG;
     Jogador* player1;
     ListaEntidades* LEs;
     Fase* fase1;

@@ -12,7 +12,7 @@ public:
 
     void Executar();
 
-    void colidir(Entidade* e);
+    void colidir(Entidade* e) override;
 
 
 

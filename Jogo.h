@@ -20,7 +20,7 @@ private:
 	
 public:
     Jogo();
-	~Jogo();
+	virtual ~Jogo();
     void Executar();
 };
 

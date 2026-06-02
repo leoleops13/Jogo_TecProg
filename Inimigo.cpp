@@ -9,4 +9,5 @@ Inimigo::Inimigo()
 
 Inimigo::~Inimigo()
 {
+	int num_maldade=-1;
 }

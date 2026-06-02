@@ -4,5 +4,5 @@ Personagem::Personagem(){
   int num_vidas = 3;
 }
 Personagem::~Personagem(){
-  int num_vidas=-1;
+  int num_vidas=0;
 }

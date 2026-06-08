@@ -5,6 +5,7 @@ class Plataforma : public Obstaculo
 {
 private:
 	float altura;
+	sf::Texture textura;
 
 public:
 	Plataforma();

@@ -6,8 +6,10 @@ Plataforma::Plataforma()
 {
 	danoso = false;
 
+	textura.loadFromFile("C:\\Users\\Public\\JOGO TECPROG\\Jogo_TecProg\\sprites\\plataforma.png");
+	body.setTexture(&textura);
 	body.setSize(sf::Vector2f(300.0f, 40.0f));
-	body.setFillColor(sf::Color::Blue);
+
 }
 
 void Plataforma::executar()

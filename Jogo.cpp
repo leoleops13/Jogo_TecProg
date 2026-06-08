@@ -1,11 +1,17 @@
 #include "Jogo.h"
 #include "Plataforma.h"
-#include "Chao.h"
+#include "Chao.h"  
+#include <filesystem>
+#include<iostream>
 
 Jogo::Jogo()
 {   
+    std::cout << std::filesystem::current_path() << std::endl;
+
 	pGG = new GerenciadorGrafico();
-    
+    pGG->carregarFundo("C:\\Users\\Public\\JOGO TECPROG\\Jogo_TecProg\\sprites\\fundo.png");
+
+
     pJogador = new Jogador(pGG);
 
 	Inimigo* inimigo1 = new Inimigo();
@@ -51,6 +57,9 @@ void Jogo::Executar()
         pJogador->executar();
         pGC->executar();
         pGG->clear(); 
+
+        pGG->desenharFundo();
+
         for (int i = 0;i < LEs->LEs.getLen();i++) {
 			Entidade* temp = LEs->LEs.getItem(i);
             temp->Draw();

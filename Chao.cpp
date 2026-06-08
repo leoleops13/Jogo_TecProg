@@ -5,8 +5,10 @@ Chao::Chao()
 {
 	danoso = false;
 
+	textura.loadFromFile("C:\\Users\\Public\\JOGO TECPROG\\Jogo_TecProg\\sprites\\chao.png");
+	body.setTexture(&textura);
 	body.setSize(sf::Vector2f(800.0f, 50.0f));
-	body.setFillColor(sf::Color::Green);
+	
 }
 
 void Chao::executar()

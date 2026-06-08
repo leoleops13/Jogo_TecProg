@@ -1,2 +1,15 @@
-﻿  Jogador.cpp
+﻿  Chao.cpp
+  Entidade.cpp
+  Fase.cpp
+  GerenciadorColisao.cpp
+  GerenciadorGrafico.cpp
+  Inimigo.cpp
+  Jogador.cpp
+  Jogo.cpp
+  Jogo_TecProg.cpp
+  ListaEntidades.cpp
+  Obstaculo.cpp
+  Personagem.cpp
+  Plataforma.cpp
+  Gerando Código...
   Jogo_TecProg.vcxproj -> C:\Users\Public\JOGO TECPROG\Jogo_TecProg\x64\Debug\Jogo_TecProg.exe

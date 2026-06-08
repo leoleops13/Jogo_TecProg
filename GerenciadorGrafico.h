@@ -5,6 +5,9 @@ class GerenciadorGrafico
 {
 private:
 	sf::RenderWindow window;
+	sf::Texture texturaFundo;
+	sf::Sprite spriteFundo;
+
 
 public:
 	GerenciadorGrafico();
@@ -14,6 +17,8 @@ public:
 	void display();
 	void desenhar(sf::RectangleShape& body);
 	bool isOpen();
+	void carregarFundo(const std::string& caminho);
+	void desenharFundo();
 		
 };
 

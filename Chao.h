@@ -5,6 +5,7 @@ class Chao : public Obstaculo
 {
 private:
 	float altura;
+	sf::Texture textura;
 
 public:
 	Chao();

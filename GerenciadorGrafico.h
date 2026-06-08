@@ -14,6 +14,6 @@ public:
 	void display();
 	void desenhar(sf::RectangleShape& body);
 	bool isOpen();
-
+		
 };
 

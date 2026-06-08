@@ -1,6 +1,6 @@
 #include "GerenciadorGrafico.h"
 
-GerenciadorGrafico::GerenciadorGrafico() :window(sf::VideoMode({ 400, 400 }), "Joguinho de cria")
+GerenciadorGrafico::GerenciadorGrafico() :window(sf::VideoMode({ 800, 600 }), "Joguinho de cria")
 {
 
 }
@@ -32,3 +32,4 @@ bool GerenciadorGrafico::isOpen()
 {
 	return window.isOpen();
 }
+	

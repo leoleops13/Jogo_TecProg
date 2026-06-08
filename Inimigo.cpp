@@ -10,3 +10,15 @@ Inimigo::Inimigo()
 Inimigo::~Inimigo()
 {
 }
+
+void Inimigo::executar()
+{
+}
+
+void Inimigo::salvar()
+{
+}
+
+void Inimigo::colidir(Entidade* e)
+{
+}

@@ -19,6 +19,10 @@ Fase::Fase(Jogador* j1, GerenciadorGrafico* gg)
 	inicializaElementos();
 }
 
+void Fase::executar()
+{
+}
+
 void Fase::adicionarInimigo(Inimigo* inimigo)
 {
 	if (inimigo) {
@@ -26,7 +30,16 @@ void Fase::adicionarInimigo(Inimigo* inimigo)
 		inimigo->setGerenciadorGrafico(pGG);  // Configurar o GerenciadorGrafico
 		listaEntidades->LEs.push(i1);
 	}
-}	
+}
+void Fase::adicionarEntidade(Entidade* entidade)
+{
+	if(entidade)
+	{ 
+		entidade->setGerenciadorGrafico(pGG);
+		listaEntidades->LEs.push(entidade);
+	}
+}
+
 Fase::~Fase()
 {
 	delete listaEntidades;
